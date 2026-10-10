@@ -1,0 +1,42 @@
+name: Publish Nexus Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Package release files
+        shell: bash
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          ENGINE_FILE="engine/Nexus_V${VERSION}.js"
+          NOTES_FILE="releases/V${VERSION}/README.md"
+
+          test -f "$ENGINE_FILE" || { echo "Engine file not found: $ENGINE_FILE"; exit 1; }
+          test -f "$NOTES_FILE" || { echo "Release notes not found: $NOTES_FILE"; exit 1; }
+
+          mkdir -p dist
+          cp "$ENGINE_FILE" "dist/Nexus_V${VERSION}.js"
+          cp LICENSE dist/LICENSE
+          cp "$NOTES_FILE" dist/RELEASE_NOTES.md
+          cd dist
+          zip "Nexus-V${VERSION}.zip" "Nexus_V${VERSION}.js" LICENSE RELEASE_NOTES.md
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Nexus V${GITHUB_REF_NAME#v}
+          body_path: releases/V${GITHUB_REF_NAME#v}/README.md
+          files: |
+            dist/Nexus_V${GITHUB_REF_NAME#v}.js
+            dist/Nexus-V${GITHUB_REF_NAME#v}.zip
