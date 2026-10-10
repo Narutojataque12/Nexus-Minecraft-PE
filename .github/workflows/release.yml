@@ -15,10 +15,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Read release version
+        id: meta
+        shell: bash
+        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
       - name: Package release files
         shell: bash
+        env:
+          VERSION: ${{ steps.meta.outputs.version }}
         run: |
-          VERSION="${GITHUB_REF_NAME#v}"
           ENGINE_FILE="engine/Nexus_V${VERSION}.js"
           NOTES_FILE="releases/V${VERSION}/README.md"
 
@@ -35,8 +41,8 @@ jobs:
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: Nexus V${GITHUB_REF_NAME#v}
-          body_path: releases/V${GITHUB_REF_NAME#v}/README.md
+          name: Nexus V${{ steps.meta.outputs.version }}
+          body_path: releases/V${{ steps.meta.outputs.version }}/README.md
           files: |
-            dist/Nexus_V${GITHUB_REF_NAME#v}.js
-            dist/Nexus-V${GITHUB_REF_NAME#v}.zip
+            dist/Nexus_V${{ steps.meta.outputs.version }}.js
+            dist/Nexus-V${{ steps.meta.outputs.version }}.zip
