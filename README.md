@@ -5,8 +5,8 @@
 **English:** Experimental mod engine for Minecraft Pocket Edition 1.0.9 with Toolbox 3.2.29, written in ES5 JavaScript for Rhino/ModPE. It is not official Forge and does not automatically support modern Minecraft versions.
 
 ## Versión / Version
-- Engine: **0.2.0**
-- Motor principal / Main engine: [engine/Nexus_V0.2.js](engine/Nexus_V0.2.js)
+- Engine: **0.2.1**
+- Motor principal / Main engine: [engine/Nexus_V0.2.1.1.js](engine/Nexus_V0.2.js)
 - Versión anterior / Previous version: [Old Versions/Nexus_V0.1.js](Old%20Versions/Nexus_V0.1.js)
 
 ## Inicio rápido / Quick start
