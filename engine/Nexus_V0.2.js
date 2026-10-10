@@ -851,7 +851,7 @@ var Nexus = (function () {
     function processCommand(commandLine) {
         var text = trim(commandLine);
         if (!text) return false;
-        text = text.replace(/^[/\.]+/, "");
+        text = text.replace(/^[\/\.]+/, "");
         var bits = text.split(/\s+/);
         var commandName = lower(bits.shift() || "");
         var args = bits;
