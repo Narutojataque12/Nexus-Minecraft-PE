@@ -803,15 +803,13 @@ var Nexus = (function () {
 
     function processNexusCommand(args) {
         var action = lower(args[0] || "help");
-        if (action === "info") action = "status";
-        if (action === "ids") action = "list";
         var id;
         if (action === "help") {
-            nativeMessage("Comandos: .nexus help | info | ids | load all | load <archivo.js> | enable <id> | disable <id> | resources");
+            nativeMessage("Comandos: /nexus help | status | list | load all | load <archivo.js> | enable <id> | disable <id> | resources");
             return true;
         }
         if (action === "status") {
-            nativeMessage("§l§a[Nexus] V" + VERSION + " |§l§6 Mods:" + modOrder.length + " |§l§2 Ticks:" + tickCount + " |§l§aEstado:" + publicApi.status);
+            nativeMessage("v" + VERSION + " | estado=" + publicApi.status + " | mods=" + modOrder.length + " | tick=" + tickCount);
             nativeMessage("Carpeta Mods: " + rootPath + "Mods/");
             return true;
         }
@@ -851,7 +849,7 @@ var Nexus = (function () {
     function processCommand(commandLine) {
         var text = trim(commandLine);
         if (!text) return false;
-        text = text.replace(/^[/\.]+/, "");
+        text = text.replace(/^\/+/, "");
         var bits = text.split(/\s+/);
         var commandName = lower(bits.shift() || "");
         var args = bits;
