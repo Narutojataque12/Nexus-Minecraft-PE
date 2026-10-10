@@ -6,12 +6,12 @@
 
 ## Versión / Version
 - Engine: **0.2.1**
-- Motor principal / Main engine: [engine/Nexus_V0.2.1.1.js](engine/Nexus_V0.2.js)
+- Motor principal / Main engine: [engine/Nexus_V0.2.1.js](engine/Nexus_V0.2.1.js)
 - Versión anterior / Previous version: [Old Versions/Nexus_V0.1.js](Old%20Versions/Nexus_V0.1.js)
 
 ## Inicio rápido / Quick start
 1. Haz una copia de seguridad / Back up your game and scripts.
-2. Carga el motor V0.2 como script principal en Toolbox / Load V0.2 as the main Toolbox script.
+2. Carga el motor V0.2.1 como script principal en Toolbox / Load V0.2.1 as the main Toolbox script.
 3. Coloca los mods compatibles en `/sdcard/Nexus/Mods/` / Put compatible mods there.
 4. Prueba `.nexus help`, `.nexus info` y `.nexus ids`.
 5. Prueba un mod a la vez / Test one mod at a time.
