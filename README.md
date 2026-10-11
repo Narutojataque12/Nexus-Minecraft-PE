@@ -1,4 +1,8 @@
-# Nexus — Minecraft PE
+<p align="center">
+  <img src="assets/nexus-logo.svg" alt="Nexus logo: neon green cube with an N" width="260">
+</p>
+
+<h1 align="center">Nexus — Minecraft PE</h1>
 
 **Español:** Nexus es un motor experimental para cargar y organizar mods JavaScript en Minecraft Pocket Edition 1.0.9 mediante Toolbox 3.2.29 y Rhino/ModPE. Nació para explorar una forma más ligera de ampliar versiones antiguas de Minecraft PE y dar a los creadores una API común para sus mods, sin depender de las exigencias de las versiones modernas.
 
