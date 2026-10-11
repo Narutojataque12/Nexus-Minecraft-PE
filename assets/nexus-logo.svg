@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="front" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#173d25"/><stop offset="1" stop-color="#07140c"/></linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#102719"/><stop offset="1" stop-color="#030906"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c5ff73"/><stop offset=".5" stop-color="#39ff14"/><stop offset="1" stop-color="#00a83b"/></linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="800" rx="120" fill="#050907"/>
+  <g fill="none" stroke="#26ff43" stroke-width="5" opacity=".8" filter="url(#glow)">
+    <ellipse cx="400" cy="405" rx="330" ry="115" transform="rotate(-28 400 405)"/>
+    <ellipse cx="400" cy="405" rx="330" ry="115" transform="rotate(28 400 405)"/>
+  </g>
+  <g stroke="url(#edge)" stroke-width="10" stroke-linejoin="round" filter="url(#glow)">
+    <path d="M400 120 620 245 400 370 180 245Z" fill="#102b18"/>
+    <path d="M180 245 400 370 400 650 180 520Z" fill="url(#front)"/>
+    <path d="M620 245 400 370 400 650 620 520Z" fill="url(#side)"/>
+  </g>
+  <g opacity=".5" fill="#20ff50">
+    <path d="M400 145 560 236 400 327 240 236Z" opacity=".12"/>
+    <path d="M210 263 380 360 380 610 210 510Z" opacity=".12"/>
+    <path d="M590 263 420 360 420 610 590 510Z" opacity=".08"/>
+  </g>
+  <path d="M300 435 300 575 350 604 350 488 450 575 500 546 500 400 450 372 450 487 350 400Z" fill="#020704" opacity=".8" transform="translate(8 10)"/>
+  <path d="M290 420 290 560 340 589 340 473 460 575 510 546 510 400 460 371 460 487 340 385Z" fill="url(#edge)" stroke="#c5ff73" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M310 431 310 548 321 554 321 451 470 559 490 547 490 411 470 399 470 526 330 405Z" fill="#07130a" opacity=".75"/>
+  <g fill="#52ff3c" opacity=".9">
+    <rect x="122" y="275" width="18" height="18" transform="rotate(25 131 284)"/>
+    <rect x="648" y="300" width="15" height="15" transform="rotate(25 655 307)"/>
+    <rect x="165" y="578" width="12" height="12" transform="rotate(25 171 584)"/>
+    <rect x="623" y="567" width="20" height="20" transform="rotate(25 633 577)"/>
+    <rect x="398" y="82" width="14" height="14"/>
+  </g>
+</svg>
