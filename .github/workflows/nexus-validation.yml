@@ -1,0 +1,57 @@
+name: Nexus - Validación JavaScript
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  javascript-syntax:
+    name: Comprobar sintaxis de archivos JavaScript
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validar sintaxis de los archivos .js
+        shell: bash
+        run: |
+          mapfile -d '' files < <(find . -type f -name '*.js' \
+            -not -path './.git/*' \
+            -not -path './node_modules/*' \
+            -print0)
+
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "::error::No se encontraron archivos .js para validar."
+            exit 1
+          fi
+
+          echo "Se encontraron ${#files[@]} archivos JavaScript."
+          failed=0
+
+          for file in "${files[@]}"; do
+            echo "::group::Validando $file"
+            if node --check "$file"; then
+              echo "OK: $file"
+            else
+              echo "::error file=$file::La sintaxis JavaScript no es válida para Node.js."
+              failed=1
+            fi
+            echo "::endgroup::"
+          done
+
+          if [ "$failed" -ne 0 ]; then
+            exit 1
+          fi
+
+          echo "Todas las comprobaciones de sintaxis terminaron correctamente."
