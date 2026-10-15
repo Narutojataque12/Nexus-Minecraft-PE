@@ -2,46 +2,44 @@
 
 ## Español
 
-¡Bienvenidos a Nexus V0.3.0! Esta versión del motor está presentada por su creador como estable y jugable para Minecraft Pocket Edition 1.0.9 con Toolbox 3.2.29, ModPE y Rhino/JavaScript ES5. Es la versión de trabajo definitiva por el momento.
+¡Bienvenidos a Nexus V0.3.0! Presento esta versión como la versión estable y jugable de mi motor para Minecraft Pocket Edition 1.0.9 con Toolbox 3.2.29, ModPE y Rhino/JavaScript ES5. Es mi versión de trabajo definitiva por el momento.
 
-### Novedades
-- Registro obligatorio y validado: un mod por archivo mediante `Nexus.registerMod({...})`, con ID numérica positiva y única.
-- Diagnóstico ampliado mediante `/Nexus info`, con estado del motor, archivos, mods, errores, advertencias y registros conocidos.
-- Comandos oficiales unificados bajo `/Nexus`: `help`, `info`, `log`, `load`, `on ID`, `off ID`, `IDS` y `resources`.
-- API modular para eventos, tareas programadas, logs, mods, comandos, objetos, jugador, mundo, entidades, bloques, efectos, UI, recursos, registro, compatibilidad, almacenamiento, configuración y datos.
-- Validación y detección de IDs duplicadas y conflictos de registro compatibles.
-- Nuevas guías públicas para creadores y asistentes de IA: instrucciones de IA, plantilla ES5 y reglas de registro.
+### Novedades que incorporé
+- Consolidé el registro mediante `Nexus.registerMod({...})): un mod por archivo con un ID numérico positivo y único.
+- Preparé el diagnóstico de `/Nexus info` para mostrar estado del motor, archivos, mods, errores, advertencias y registros conocidos.
+- Unifiqué los comandos documentados bajo `/Nexus`: `help`, `info`, `log`, `load`, `on ID`, `off ID`, `IDS` y `resources`.
+- Organicé las API para eventos, tareas programadas, logs, mods, comandos, objetos, jugador, mundo, entidades, bloques, efectos, UI, recursos, registro, compatibilidad, almacenamiento, configuración y datos.
+- Incorporé validaciones para IDs duplicadas y detección de conflictos de registro compatibles.
+- Preparé nuevas guías para creadores y asistentes de IA: instrucciones para IA, plantilla ES5 y reglas de registro.
 
-### Cambios documentales
-- README reescrito como bienvenida a V0.3.0 estable y jugable.
-- Reemplazadas instrucciones antiguas referidas al motor V0.2 y a comandos con punto.
-- Eliminado el ejemplo de mod antiguo que no seguía el contrato actual del cargador.
-- Añadidos `docs/INSTRUCCIONES_IA_NEXUS.txt`, `docs/PLANTILLA_MOD.js` y `docs/REGISTRO_MODS.md`.
-- Añadido `releases/V0.3.0/README.md` con notas bilingües.
-- Eliminada la página no relacionada `docs/NUCLEO_TERRESTRE.md`; no forma parte de esta versión del motor.
-- Se publica en el repositorio el archivo del motor `engine/Nexus_V0.3.0.js`, conservado desde el archivo fuente proporcionado por el creador.
+### Cambios documentales que hice
+- Reescribí el README como bienvenida a mi versión V0.3.0 estable y jugable.
+- Reemplacé instrucciones antiguas que hacían referencia al motor V0.2 y a comandos con punto.
+- Retiré el ejemplo de mod antiguo que no seguía el formato actual de registro.
+- Añadí `docs/INSTRUCCIONES_IA_NEXUS.txt`, `docs/PLANTILLA_MOD.js) y `docs/REGISTRO_MODS.md`.
+- Preparé estas notas bilingües en `releases/V0.3.0/README.md`.
+- Incorporé al repositorio `engine/Nexus_V0.3.0.js) desde el archivo fuente que recibí, conservando intacta la lógica del motor.
 
-Esta actualización no crea la GitHub Release automáticamente. La publicación oficial queda a cargo del mantenedor.
+Dejé los archivos preparados en el repositorio, pero todavía no he publicado la GitHub Release. Lanzaré esa publicación por separado.
 
 ## English
 
-Welcome to Nexus V0.3.0! The creator presents this engine as stable and playable for Minecraft Pocket Edition 1.0.9 with Toolbox 3.2.29, ModPE, and Rhino/JavaScript ES5. It is the definitive working engine for now.
+Welcome to Nexus V0.3.0! I'm presenting this as the stable and playable version of my engine for Minecraft Pocket Edition 1.0.9 with Toolbox 3.2.29, ModPE, and Rhino/JavaScript ES5. It is my definitive working version for now.
 
-### Highlights
-- Required, validated registration: one mod per file via `Nexus.registerMod({...})`, with a unique positive numeric ID.
-- Expanded diagnostics through `/Nexus info`, reporting engine status, files, mods, errors, warnings, and known registrations.
-- Unified engine commands under `/Nexus`: `help`, `info`, `log`, `load`, `on ID`, `off ID`, `IDS`, and `resources`.
-- Modular APIs for events, scheduling, logs, mods, commands, items, player, world, entities, blocks, effects, UI, resources, registry, compatibility, storage, configuration, and data.
-- Validation and detection for duplicate mod IDs and supported registry conflicts.
-- New public guidance for creators and AI assistants: AI instructions, an ES5 template, and registration rules.
+### Highlights I added
+- I consolidated registration through `Nexus.registerMod({...})): one mod per file with a unique positive numeric ID.
+- I prepared `/Nexus info` diagnostics to report engine status, files, mods, errors, warnings, and known registrations.
+- I unified the documented commands under `/Nexus`: `help`, `info`, `log`, `load`, `on ID`, `off ID`, `IDS`, and `resources`.
+- I organized the APIs for events, scheduling, logs, mods, commands, items, player, world, entities, blocks, effects, UI, resources, registry, compatibility, storage, configuration, and data.
+- I added validation for duplicate IDs and detection for supported registry conflicts.
+- I prepared new guidance for creators and AI assistants: AI instructions, an ES5 template, and registration rules.
 
-### Documentation changes
-- Rewrote the README as a welcome to stable, playable V0.3.0.
-- Replaced stale instructions that referenced the V0.2 engine and dot-prefixed commands.
-- Removed the outdated example mod that did not follow the current loader contract.
-- Added `docs/INSTRUCCIONES_IA_NEXUS.txt`, `docs/PLANTILLA_MOD.js`, and `docs/REGISTRO_MODS.md`.
-- Added these bilingual release notes at `releases/V0.3.0/README.md`.
-- Removed the unrelated `docs/NUCLEO_TERRESTRE.md`; it is not part of this engine version.
-- Added `engine/Nexus_V0.3.0.js` from the exact engine source provided by the creator.
+### Documentation changes I made
+- I rewrote the README to welcome users to my stable and playable V0.3.0.
+- I replaced outdated instructions referring to the V0.2 engine and dot-prefixed commands.
+- I removed the older mod example that did not follow the current registration format.
+- I added `docs/INSTRUCCIONES_IA_NEXUS.txt`, `docs/PLANTILLA_MOD.js`, and `docs/REGISTRO_MODS.md`.
+- I prepared these bilingual release notes at `releases/V0.3.0/README.md`.
+- I added `engine/Nexus_V0.3.0.js` from the source file I received, preserving the engine's logic.
 
-This repository update does not create the GitHub Release automatically. The maintainer will publish it.
+I have prepared the files in the repository, but I have not published the GitHub Release yet. I will publish it separately.
