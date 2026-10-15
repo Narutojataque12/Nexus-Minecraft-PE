@@ -1,19 +1,12 @@
 # Changelog / Registro de cambios
 
-## [0.2.0] — 2026-10-10
-- Añadido soporte de comandos con prefijo `.nexus`, conservando el prefijo slash.
-- `.nexus info` funciona como alias de estado; `.nexus ids` como alias de lista.
-- Formato de estado verde con versión, mods, ticks y estado.
-- README, guía, licencia y notas de versión bilingües.
-- Actualización conservadora, sin reescribir la arquitectura.
-- **Pendiente:** forzar IDs numéricos y validar el motor en el juego real.
-
-## English
-- Added `.nexus` command prefix while retaining slash-prefix compatibility.
-- Added `info` and `ids` aliases and green status formatting.
-- Added bilingual documentation, license and release notes.
-- Conservative update; numeric-only ID enforcement and in-game validation remain pending.
-
+## [0.3.0] — documentación actualizada el 2026-10-15 / documentation updated 2026-10-15
+- Documentado el mod **Núcleo Terrestre**, una defensa de Beacon para Minecraft PE 1.0.9.
+- Añadida documentación bilingüe con comportamiento previsto, configuración descrita y limitaciones de verificación.
+- README actualizado para reflejar Nexus V0.3.0 como motor de trabajo experimental y enlazar la documentación del mod.
+- El creador reporta una prueba en su dispositivo con cero errores registrados para el mod y el motor. Este resultado se presenta como prueba reportada, no como garantía universal.
+- No se ha creado ni publicado una GitHub Release. La publicación queda a cargo del creador.
+- El código del motor no se modifica en este cambio documental.
 
 ## [0.2.1] — 2026-10-10
 - Informe inicial automático al entrar al mundo.
@@ -36,3 +29,17 @@
 - Loader output uses `Failures: N`.
 - No public API changes.
 - In-game validation remains pending.
+
+## [0.2.0] — 2026-10-10
+- Añadido soporte de comandos con prefijo `.nexus`, conservando el prefijo slash.
+- `.nexus info` funciona como alias de estado; `.nexus ids` como alias de lista.
+- Formato de estado verde con versión, mods, ticks y estado.
+- README, guía, licencia y notas de versión bilingües.
+- Actualización conservadora, sin reescribir la arquitectura.
+- **Pendiente:** forzar IDs numéricos y validar el motor en el juego real.
+
+## English
+- Added `.nexus` command prefix while retaining slash-prefix compatibility.
+- Added `info` and `ids` aliases and green status formatting.
+- Added bilingual documentation, license and release notes.
+- Conservative update; numeric-only ID enforcement and in-game validation remain pending.
