@@ -3,54 +3,60 @@
 ## [0.3.0] — 2026-10-15
 
 ### Añadido
-- Publicación del motor fuente `engine/Nexus_V0.3.0.js`, copiado de la versión proporcionada por el creador sin cambios funcionales.
-- Bienvenida bilingüe en README para la nueva versión estable y jugable.
-- Notas de publicación bilingües en `releases/V0.3.0/README.md`.
-- `docs/INSTRUCCIONES_IA_NEXUS.txt`: reglas para orientar asistentes de IA al desarrollo de mods para Nexus.
-- `docs/PLANTILLA_MOD.js`: plantilla mínima con el registro esperado por el cargador.
-- `docs/REGISTRO_MODS.md`: explicación de IDs, registro único por archivo, eventos y conflictos.
-- Guía actualizada para Minecraft PE 1.0.9, Toolbox 3.2.29, ModPE, Rhino y JavaScript ES5.
-- Documentación de comandos `/Nexus`, diagnóstico, APIs y flujo de instalación.
+- Incorporé al repositorio el motor fuente `engine/Nexus_V0.3.0.js), conservando la lógica del archivo que recibí.
+- Escribí una bienvenida bilingüe en el README para presentar V0.3.0 como mi versión estable y jugable.
+- Preparé las notas de publicación bilingües en `releases/V0.3.0/README.md`.
+- Añadí `docs/INSTRUCCIONES_IA_NEXUS.txt` con reglas para orientar asistentes de IA a crear mods compatibles con mi motor.
+- Añadí `docs/PLANTILLA_MOD.js` como punto de partida para los creadores de mods.
+- Añadí `docs/REGISTRO_MODS.md` para explicar los IDs, el registro único por archivo, los eventos y los conflictos.
+- Actualicé la guía para el entorno Minecraft PE 1.0.9, Toolbox 3.2.29, ModPE, Rhino y JavaScript ES5.
+- Organicé la documentación de comandos `/Nexus`, diagnóstico, API e instalación.
 
 ### Actualizado
-- README: Nexus V0.3.0 se presenta como estable y jugable y se explica qué aporta el motor.
-- Guía de creación de mods: ahora corresponde a V0.3.0 y a las firmas/convenciones del motor actual.
-- Enlaces de la documentación para creadores e IA.
+- Reescribí el README para dar la bienvenida a V0.3.0 en primera persona y explicar las novedades que incorporé.
+- Actualicé la guía de creación de mods para que corresponda a V0.3.0 y a las convenciones actuales del motor.
+- Añadí enlaces a los materiales para creadores y asistentes de IA.
 
 ### Eliminado o corregido
-- Eliminadas referencias obsoletas de la guía a `engine/Nexus_V0.2.js` y a comandos `.nexus`.
-- Eliminada la plantilla antigua `MiMod` que suponía autocarga sin registro.
-- Eliminada `docs/NUCLEO_TERRESTRE.md`, una página sobre un mod ajeno a esta actualización del motor.
-- Corregida la presentación general que describía V0.3.0 como inestable/en desarrollo.
-- No se ha publicado una GitHub Release desde este cambio; el mantenedor la lanzará por separado.
+- Retiré las referencias antiguas de la guía a `engine/Nexus_V0.2.js` y a los comandos `.nexus`.
+- Retiré la plantilla antigua `MiMod`, que daba a entender que un objeto se cargaba sin el registro actual.
+- Retiré documentación que no correspondía al alcance de esta actualización del motor.
+- Corregí la presentación anterior que describía V0.3.0 como inestable o todavía en desarrollo.
+- Todavía no he lanzado la GitHub Release; publicaré el lanzamiento por separado.
 
-### Nota de alcance
-Los cambios de esta sección documentan la entrega de V0.3.0 y reorganizan archivos públicos. El código del motor se sube desde la fuente del creador sin modificar la lógica del motor.
+### Alcance de esta actualización
+Preparé esta entrega para presentar V0.3.0 y organizar sus archivos públicos. Conservé intacta la lógica del motor fuente.
 
 ## [0.2.1] — 2026-10-10
-- Informe inicial automático al entrar al mundo.
-- `/Nexus info` ejecuta diagnóstico de acceso a archivos, carpeta Mods, estados de carga y registros.
-- Estado verde para correcto, ámbar para advertencias y rojo para fallas graves detectadas.
-- Evita duplicar el encabezado [Nexus] en mensajes de estado.
-- El encabezado siempre es verde; los mensajes normales son blancos; los estados del diagnóstico usan color dinámico.
-- Las líneas visibles usan formato en negrita `§l`.
-- La salida del cargador usa `Fallas: N` en lugar de `omitidos/fallidos`.
-- Sin cambios en APIs públicas.
-- La validación en Minecraft PE 1.0.9 + Toolbox 3.2.29 queda pendiente.
+- Añadí el informe inicial automático al entrar al mundo.
+- Amplié `/Nexus info` para diagnosticar el acceso a archivos, la carpeta Mods, los estados de carga y los registros.
+- Incorporé los estados verde para correcto, ámbar para advertencias y rojo para fallas graves detectadas.
+- Evité que se duplicara el encabezado [Nexus] en los mensajes de estado.
+- Configuré el encabezado en verde, los mensajes normales en blanco y los estados de diagnóstico con color dinámico.
+- Añadí formato en negrita `§l` a las líneas visibles.
+- Cambié la salida del cargador a `Fallas: N` en lugar de `omitidos/fallidos`.
+- No cambié las APIs públicas en esa versión.
+- Dejé pendiente la validación en Minecraft PE 1.0.9 + Toolbox 3.2.29.
 
-## English
-- Automatic first report when entering a world.
-- `/Nexus info` checks file access, Mods folder, loader states, and logs.
-- Green for healthy, amber for warnings, red for detected serious failures.
-- Prevents duplicate [Nexus] status headers.
-- Green header, white normal messages, dynamic diagnostic colors.
-- Visible messages use bold `§l` formatting.
-- Loader output uses `Failures: N`.
-- No public API changes.
-- In-game validation was pending at that time.
+### English
+- I added the automatic first report when entering a world.
+- I expanded `/Nexus info` to diagnose file access, the Mods folder, loader states, and logs.
+- I added green, amber, and red status indicators for healthy states, warnings, and detected serious failures.
+- I prevented duplicate [Nexus] status headers.
+- I set the header to green, normal messages to white, and diagnostic states to dynamic colors.
+- I added bold `§l` formatting to visible lines.
+- I changed loader output to `Failures: N` instead of `skipped/failed`.
+- I made no public API changes in that version.
+- I left validation in Minecraft PE 1.0.9 + Toolbox 3.2.29 pending at that time.
 
 ## [0.2.0] — 2026-10-10
-- Added `.nexus` command prefix while retaining slash-prefix compatibility.
-- Added `info` and `ids` aliases and green status formatting.
-- Added bilingual documentation, license, and release notes.
-- Conservative update; numeric-only ID enforcement and in-game validation remained pending.
+- Añadí el prefijo de comandos `.nexus` y mantuve la compatibilidad con el prefijo slash de aquella versión.
+- Incorporé los alias `info` e `ids` y el formato de estado verde.
+- Añadí documentación bilingüe, licencia y notas de publicación.
+- Mantuve esa actualización conservadora; dejé pendientes el control exclusivo de IDs numéricos y la validación dentro del juego.
+
+### English
+- I added the `.nexus` command prefix while retaining slash-prefix compatibility in that version.
+- I added the `info` and `ids` aliases and green status formatting.
+- I added bilingual documentation, a license, and release notes.
+- I kept that update conservative and left numeric-only ID enforcement and in-game validation pending.
