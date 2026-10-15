@@ -5,14 +5,14 @@
 ### Motor y herramientas
 - Se incorpora el código fuente de Nexus V0.3.0 al repositorio en `engine/Nexus_V0.3.0.js`.
 - Se establece V0.3.0 como la versión estable y jugable de referencia para Minecraft PE 1.0.9, Toolbox 3.2.29, ModPE, Rhino y JavaScript ES5.
-- Se documenta el registro de un único mod por archivo mediante `Nexus.registerMod({...})), con ID numérico positivo y único.
+- Se documenta el registro de un único mod por archivo mediante `Nexus.registerMod({...})`, con ID numérico positivo y único.
 - Se documentan los diagnósticos disponibles mediante `/Nexus info`.
 - Se unifican los comandos documentados de administración bajo `/Nexus`: `help`, `info`, `log`, `load`, `on ID`, `off ID`, `IDS` y `resources`.
 - Se documentan los módulos de API para eventos, tareas programadas, registros, mods, comandos, objetos, jugador, mundo, entidades, bloques, efectos, interfaz, recursos, registro, compatibilidad, almacenamiento, configuración y datos.
 - Se incluyen referencias técnicas para la creación de mods, asistentes de IA, plantilla JavaScript ES5 y registro.
 
 ### Documentación retirada o sustituida
-- Se sustituyen las instrucciones obsoletas que hacían referencia al archivo `engine/Nexus_V0.2.js).
+- Se sustituyen las instrucciones obsoletas que hacían referencia al archivo `engine/Nexus_V0.2.js`.
 - Se retira el ejemplo antiguo `MiMod` que no utiliza el registro actual.
 - La documentación de comandos de V0.3.0 deja de presentar `.nexus` como interfaz vigente y utiliza `/Nexus`.
 
