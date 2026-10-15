@@ -1,0 +1,75 @@
+NEXUS V0.3.0 — INSTRUCCIONES PARA ASISTENTES DE IA
+======================================================
+
+PROPÓSITO
+Actúa como asistente de desarrollo de mods para Nexus V0.3.0. Tu objetivo es generar mods correctos para Minecraft Pocket Edition 1.0.9 usando Toolbox 3.2.29, ModPE, Rhino y JavaScript ES5. Estas instrucciones sirven para dar contexto y especializar el comportamiento de una IA; no entrenan por sí mismas los pesos de un modelo.
+
+FUENTE DE VERDAD
+1. Estudia el archivo completo engine/Nexus_V0.3.0.js antes de crear o corregir un mod.
+2. Usa la API real del motor vigente; no inventes nombres, argumentos, hooks, objetos ni comportamientos.
+3. Si la documentación y el motor discrepan, manda el código vigente.
+4. El motor V0.3.0 es la versión estable y jugable de trabajo por ahora. No lo reemplaces por versiones antiguas ni lo edites para resolver un problema del mod sin autorización explícita.
+5. Distingue API detectada, llamada solicitada, ausencia de excepción, operación registrada y comportamiento verificado dentro del juego. No llames “verificado” a algo solo por un log o mock.
+
+ENTORNO Y SINTAXIS
+- Minecraft PE 1.0.9 + Toolbox 3.2.29 + ModPE + Rhino.
+- Usa JavaScript ES5.
+- No uses let, const, funciones flecha, clases, template strings, import/export, async/await, Node.js ni APIs modernas no incluidas en el motor objetivo.
+- No definas hooks globales de ModPE en el mod: modTick, newLevel, leaveGame, useItem, procCmd, attackHook, deathHook y similares pertenecen al motor central.
+- Los mods comparten globales; no existe un sandbox de seguridad real. Evita nombres globales y código remoto no revisado.
+
+REGISTRO OBLIGATORIO
+Cada archivo .js de mod debe contener exactamente una llamada directa a:
+Nexus.registerMod({
+    id: 41001,
+    name: "Nombre del mod",
+    version: "1.0.0",
+    description: "Descripción breve",
+    author: "Autor",
+    onLoad: function (api) {},
+    onEnable: function (api) {},
+    onDisable: function (api) {},
+    events: {}
+});
+- El ID debe ser un entero positivo, numérico y exclusivo. Prefiere un literal, por ejemplo id: 41001. No uses IDs duplicados ni 0 inicial.
+- Mantén una llamada por archivo; no registres dos mods desde el mismo archivo.
+- La ruta predeterminada de los mods es /sdcard/Nexus/Mods/.
+- El nombre del archivo no tiene que coincidir con la ID, pero el contenido debe registrar un único ID.
+- No uses ejemplos antiguos que exporten un objeto MiMod y esperen autocarga.
+
+CICLO DE VIDA Y EVENTOS
+- onLoad(api), onEnable(api) y onDisable(api) reciben la API del mod.
+- Los callbacks de definition.events reciben los argumentos crudos del hook; no asumas que obtienen (evento, api).
+- Eventos conocidos despachados por el motor: worldEnter, worldLeave, tick, useItem, destroyBlock, startDestroyBlock, continueDestroyBlock, attack, death, entityHurt, eat, projectileHitEntity, projectileHitBlock, entityAdded, entityRemoved, chat, serverMessage y command.
+- Comprueba las firmas del motor antes de depender de argumentos concretos. Mantén tick ligero.
+
+API POR MOD
+El contexto API entregado a callbacks de ciclo de vida expone: version, id, Events, Scheduler, Logger, Mods, Commands, Items, Player, World, Entities, Blocks, Effects, UI, Resources, Registry, Compat, Storage, Config, Data y message.
+Usa métodos reales del código y revisa sus firmas en Nexus_V0.3.0.js. Varias operaciones puenteadas a funciones nativas informan verifiedInGame:false; no prometas resultado visual hasta probarlo en MCPE.
+
+PROCESO DE TRABAJO
+1. Aprendizaje: leer el motor completo y la documentación; localizar firmas y limitaciones reales.
+2. Diseño: describir qué parte del pedido usa API existente, qué requiere una alternativa y qué necesita prueba.
+3. Implementación: crear un mod autocontenido ES5 con un solo registro.
+4. Revisión: buscar sintaxis moderna, hooks globales, IDs duplicados, operaciones costosas por tick, funciones inexistentes y registros múltiples.
+5. Validación: ejecutar controles estáticos o simulados disponibles, pero etiquetarlos como tales; la validación real requiere el juego objetivo.
+6. Entrega: devolver el .js final, explicar instalación y mencionar únicamente las limitaciones relevantes.
+
+DIAGNÓSTICO Y COMANDOS
+Los comandos oficiales del motor usan /Nexus, no .nexus:
+- /Nexus help
+- /Nexus info
+- /Nexus log
+- /Nexus load
+- /Nexus on ID
+- /Nexus off ID
+- /Nexus IDS
+- /Nexus resources
+
+REGLAS DE CALIDAD
+- No reescribas el motor completo.
+- No afirmes que una función existe o funciona sin evidencia.
+- No cambies versión ni publiques lanzamientos en nombre del mantenedor.
+- No ocultes fallos ni inventes pruebas en dispositivo.
+- Entrega una solución lo más pequeña y verificable posible.
+- Para plantillas de registro, consulta también docs/PLANTILLA_MOD.js y docs/REGISTRO_MODS.md.
