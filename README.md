@@ -1,43 +1,77 @@
-# Nexus — Minecraft PE
+# Nexus V0.3.0 — ¡bienvenida la nueva versión!
 
-**Español:** Nexus es un motor experimental para cargar y organizar mods JavaScript en Minecraft Pocket Edition 1.0.9 mediante Toolbox 3.2.29 y Rhino/ModPE. Su objetivo es ofrecer una API común para creadores de mods de versiones antiguas de Minecraft PE.
+**Nexus V0.3.0 ya está aquí: una versión estable y jugable del motor para Minecraft Pocket Edition 1.0.9.**  
+La versión se presenta como la base definitiva de trabajo por ahora: su código se conserva tal como fue entregado por el creador; esta actualización organiza la publicación y la documentación para la comunidad.
 
-**English:** Nexus is an experimental engine for loading and organizing JavaScript mods in Minecraft Pocket Edition 1.0.9 through Toolbox 3.2.29 and Rhino/ModPE. It aims to provide a shared API for creators targeting older Minecraft PE versions.
+Nexus permite cargar y organizar mods escritos en JavaScript ES5 mediante Toolbox 3.2.29, ModPE y Rhino.
 
-> **Estado / Status:** Nexus V0.3.0 es la versión de trabajo del motor y sigue siendo experimental. El creador ha informado una prueba en dispositivo con el motor y el mod Núcleo Terrestre sin errores registrados. Esto no constituye una garantía de compatibilidad para todos los dispositivos ni para todos los mods.
->
-> **Nexus V0.3.0 is the current working engine version and remains experimental. The creator reported an on-device test of the engine and the Núcleo Terrestre mod with zero logged errors. This does not guarantee compatibility across all devices or mods.**
+**English:** Nexus V0.3.0 is here: a stable and playable mod engine for Minecraft Pocket Edition 1.0.9. It is the definitive working engine for now, preserved as provided by its creator. This repository update organizes the public release information and community documentation.
 
-Nexus no es Forge oficial ni promete compatibilidad con versiones modernas. La compatibilidad debe comprobarse en el entorno objetivo.
+## ¡Bienvenidos a Nexus V0.3.0! / Welcome to Nexus V0.3.0!
 
-Nexus is not official Forge and does not promise compatibility with modern versions. Compatibility must be tested in the target environment.
+### Qué hay de nuevo / What's new
 
-## Novedad / New mod: Núcleo Terrestre
+- **Registro coherente de mods:** cada archivo debe registrar exactamente un mod con `Nexus.registerMod({...})`; se exige un ID numérico positivo y único.
+- **Diagnóstico del motor:** `/Nexus info` muestra estado, archivos, mods, errores, avisos, registros de objetos y recursos.
+- **Herramientas de administración:** ayuda, consulta de IDs, carga de mods, activación/desactivación y vista de recursos mediante comandos `/Nexus`.
+- **Detección de conflictos:** el registro valida IDs y detecta conflictos de mods, comandos, recursos y otros registros compatibles.
+- **API organizada:** incluye módulos como `Events`, `Scheduler`, `Logger`, `Mods`, `Commands`, `Items`, `Player`, `World`, `Entities`, `Blocks`, `Effects`, `UI`, `Resources`, `Registry`, `Compat`, `Storage`, `Config` y `Data`.
+- **Comandos unificados:** la administración del motor usa `/Nexus`; los comandos antiguos con prefijo de punto, como `.nexus`, ya no son la interfaz documentada.
+- **Documentación para creadores e IA:** nuevas instrucciones para asistentes de IA, una plantilla básica de mod y una guía dedicada al registro.
 
-**Español:** Núcleo Terrestre es un mod de defensa para el Beacon de Minecraft PE 1.0.9. Está diseñado para detectar mobs hostiles cercanos, mostrar su presencia y aplicar daño escalonado según la distancia al Beacon. Consulta la [documentación del mod](docs/NUCLEO_TERRESTRE.md) para conocer el comportamiento previsto, la instalación y las limitaciones.
+### What this version brings
 
-**English:** Núcleo Terrestre is a defensive mod for the Beacon in Minecraft PE 1.0.9. It is designed to detect nearby hostile mobs, report their presence, and apply distance-scaled damage. See the [mod documentation](docs/NUCLEO_TERRESTRE.md) for intended behavior, installation, and limitations.
+- **Consistent mod registration:** each file must register exactly one mod with `Nexus.registerMod({...})`, using a unique positive numeric ID.
+- **Engine diagnostics:** `/Nexus info` reports status, files, mods, errors, warnings, item registrations, and resources.
+- **Management commands:** help, ID listing, mod loading, enabling/disabling, and resource inspection through `/Nexus` commands.
+- **Conflict detection:** validation and conflict reporting for supported mod, command, resource, and registry entries.
+- **Organized API:** `Events`, `Scheduler`, `Logger`, `Mods`, `Commands`, `Items`, `Player`, `World`, `Entities`, `Blocks`, `Effects`, `UI`, `Resources`, `Registry`, `Compat`, `Storage`, `Config`, and `Data`.
+- **Unified commands:** the engine's command interface uses `/Nexus`; old dot-prefixed commands such as `.nexus` are no longer documented.
+- **Creator and AI documentation:** new instructions for AI assistants, a basic mod template, and a dedicated registration guide.
 
-## Descargas / Downloads
+## Primeros pasos / Getting started
 
-Las descargas oficiales se publicarán únicamente en [Lanzamientos / Releases](https://github.com/Narutojataque12/Nexus-Minecraft-PE/releases). Esta actualización documental no crea ni publica una Release.
+1. Descarga `engine/Nexus_V0.3.0.js` desde este repositorio o desde [Releases](https://github.com/Narutojataque12/Nexus-Minecraft-PE/releases) cuando la publicación esté disponible.
+2. Carga `Nexus_V0.3.0.js` como script principal en Toolbox 3.2.29.
+3. Coloca cada mod JavaScript compatible en `/sdcard/Nexus/Mods/`.
+4. Entra a un mundo y usa `/Nexus info` para revisar el estado del motor y los mods.
+5. Prueba los mods en un mundo de prueba antes de usarlos en tus mundos importantes.
 
-Official downloads will be published only on [Releases](https://github.com/Narutojataque12/Nexus-Minecraft-PE/releases). This documentation update does not create or publish a Release.
+## Documentación / Documentation
 
-## Guías / Guides
+- [Guía para crear mods / Mod creation guide](docs/INSTRUCCIONES_CREAR_MODS.md)
+- [Instrucciones para IAs / AI assistant instructions](docs/INSTRUCCIONES_IA_NEXUS.txt)
+- [Plantilla básica JavaScript / Basic JavaScript template](docs/PLANTILLA_MOD.js)
+- [Cómo registrar mods / Mod registration guide](docs/REGISTRO_MODS.md)
+- [Notas de la versión V0.3.0 / V0.3.0 release notes](releases/V0.3.0/README.md)
 
-- [Guía bilingüe para crear mods / Bilingual mod-creation guide](docs/INSTRUCCIONES_CREAR_MODS.md)
-- [Núcleo Terrestre / Terrestrial Core mod](docs/NUCLEO_TERRESTRE.md)
+## Entrenar u orientar IAs / Training or guiding AI assistants
 
-## Créditos / Credits
+Nexus incluye material para **orientar o especializar asistentes de IA** en la creación de mods compatibles: contexto del motor, restricciones de Rhino/ES5, plantilla, reglas de registro y guía de validación. Puedes usar estos materiales como instrucciones de proyecto o como datos de referencia para un flujo de ajuste fino cuando la plataforma de IA lo admita. Añadir instrucciones a un chat, por sí solo, no cambia los pesos ni entrena automáticamente un modelo.
 
-- **Sebastián C.** — creador del proyecto / project creator.
-- **Mojang** — Minecraft.
-- **Toolbox** — sus creadores y mantenedores / its creators and maintainers.
-- **Rhino** — Mozilla y sus colaboradores / Mozilla and contributors.
+Nexus provides material to **guide or specialize AI assistants** for Nexus mod development: engine context, Rhino/ES5 constraints, a template, registration rules, and validation guidance. These materials can be used as project instructions or as reference data in a fine-tuning workflow where the AI platform supports it. Adding instructions to a chat by itself does not change a model's weights or automatically train it.
 
-## Licencia / License
+## Compatibilidad / Compatibility
 
-Consulta [LICENSE](LICENSE). Es una licencia personalizada no comercial con atribución; no está aprobada por OSI.
+- Minecraft Pocket Edition 1.0.9
+- Toolbox 3.2.29
+- ModPE + Rhino
+- JavaScript ES5
 
-See [LICENSE](LICENSE). It is a custom non-commercial attribution license and is not OSI-approved.
+El motor está presentado como estable y jugable en su entorno objetivo. Algunas operaciones que dependen de APIs nativas antiguas pueden variar según la compilación de Toolbox; valida dentro del juego los comportamientos concretos de los mods.
+
+The engine is presented as stable and playable in its target environment. Some operations that depend on older native APIs may vary by Toolbox build, so verify specific mod behavior in-game.
+
+## Comandos del motor / Engine commands
+
+- `/Nexus help` — ayuda.
+- `/Nexus info` — diagnóstico.
+- `/Nexus log` — guarda el registro reciente.
+- `/Nexus load` — intenta cargar los mods encontrados.
+- `/Nexus on ID` y `/Nexus off ID` — activa o desactiva un mod.
+- `/Nexus IDS` — lista archivos/IDs detectadas y estados.
+- `/Nexus resources` — inspecciona declaraciones de recursos.
+
+## Créditos y licencia / Credits and license
+
+**Sebastián C.** — creador de Nexus. Minecraft es propiedad de Mojang/Microsoft; Toolbox y Rhino pertenecen a sus respectivos autores y mantenedores. Nexus no es un producto oficial de Mojang. Consulta [LICENSE](LICENSE) para conocer las condiciones del proyecto.
