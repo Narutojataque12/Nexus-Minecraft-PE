@@ -3,7 +3,7 @@
 ## [0.3.0] — 2026-10-15
 
 ### Añadido
-- Incorporé al repositorio el motor fuente `engine/Nexus_V0.3.0.js), conservando la lógica del archivo que recibí.
+- Incorporé al repositorio mi motor fuente en `engine/Nexus_V0.3.0.js), conservando intacta la lógica que desarrollé.
 - Escribí una bienvenida bilingüe en el README para presentar V0.3.0 como mi versión estable y jugable.
 - Preparé las notas de publicación bilingües en `releases/V0.3.0/README.md`.
 - Añadí `docs/INSTRUCCIONES_IA_NEXUS.txt` con reglas para orientar asistentes de IA a crear mods compatibles con mi motor.
@@ -25,7 +25,7 @@
 - Todavía no he lanzado la GitHub Release; publicaré el lanzamiento por separado.
 
 ### Alcance de esta actualización
-Preparé esta entrega para presentar V0.3.0 y organizar sus archivos públicos. Conservé intacta la lógica del motor fuente.
+Preparé esta entrega para presentar V0.3.0 y organizar sus archivos públicos. Conservé intacta la lógica del motor fuente que desarrollé.
 
 ## [0.2.1] — 2026-10-10
 - Añadí el informe inicial automático al entrar al mundo.
