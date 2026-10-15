@@ -1,12 +1,31 @@
 # Changelog / Registro de cambios
 
-## [0.3.0] — documentación actualizada el 2026-10-15 / documentation updated 2026-10-15
-- Documentado el mod **Núcleo Terrestre**, una defensa de Beacon para Minecraft PE 1.0.9.
-- Añadida documentación bilingüe con comportamiento previsto, configuración descrita y limitaciones de verificación.
-- README actualizado para reflejar Nexus V0.3.0 como motor de trabajo experimental y enlazar la documentación del mod.
-- El creador reporta una prueba en su dispositivo con cero errores registrados para el mod y el motor. Este resultado se presenta como prueba reportada, no como garantía universal.
-- No se ha creado ni publicado una GitHub Release. La publicación queda a cargo del creador.
-- El código del motor no se modifica en este cambio documental.
+## [0.3.0] — 2026-10-15
+
+### Añadido
+- Publicación del motor fuente `engine/Nexus_V0.3.0.js`, copiado de la versión proporcionada por el creador sin cambios funcionales.
+- Bienvenida bilingüe en README para la nueva versión estable y jugable.
+- Notas de publicación bilingües en `releases/V0.3.0/README.md`.
+- `docs/INSTRUCCIONES_IA_NEXUS.txt`: reglas para orientar asistentes de IA al desarrollo de mods para Nexus.
+- `docs/PLANTILLA_MOD.js`: plantilla mínima con el registro esperado por el cargador.
+- `docs/REGISTRO_MODS.md`: explicación de IDs, registro único por archivo, eventos y conflictos.
+- Guía actualizada para Minecraft PE 1.0.9, Toolbox 3.2.29, ModPE, Rhino y JavaScript ES5.
+- Documentación de comandos `/Nexus`, diagnóstico, APIs y flujo de instalación.
+
+### Actualizado
+- README: Nexus V0.3.0 se presenta como estable y jugable y se explica qué aporta el motor.
+- Guía de creación de mods: ahora corresponde a V0.3.0 y a las firmas/convenciones del motor actual.
+- Enlaces de la documentación para creadores e IA.
+
+### Eliminado o corregido
+- Eliminadas referencias obsoletas de la guía a `engine/Nexus_V0.2.js` y a comandos `.nexus`.
+- Eliminada la plantilla antigua `MiMod` que suponía autocarga sin registro.
+- Eliminada `docs/NUCLEO_TERRESTRE.md`, una página sobre un mod ajeno a esta actualización del motor.
+- Corregida la presentación general que describía V0.3.0 como inestable/en desarrollo.
+- No se ha publicado una GitHub Release desde este cambio; el mantenedor la lanzará por separado.
+
+### Nota de alcance
+Los cambios de esta sección documentan la entrega de V0.3.0 y reorganizan archivos públicos. El código del motor se sube desde la fuente del creador sin modificar la lógica del motor.
 
 ## [0.2.1] — 2026-10-10
 - Informe inicial automático al entrar al mundo.
@@ -21,25 +40,17 @@
 
 ## English
 - Automatic first report when entering a world.
-- `/Nexus info` checks file access, Mods folder, loader states, and registrations.
+- `/Nexus info` checks file access, Mods folder, loader states, and logs.
 - Green for healthy, amber for warnings, red for detected serious failures.
-- Prevents duplicate [Nexus] status header.
+- Prevents duplicate [Nexus] status headers.
 - Green header, white normal messages, dynamic diagnostic colors.
 - Visible messages use bold `§l` formatting.
 - Loader output uses `Failures: N`.
 - No public API changes.
-- In-game validation remains pending.
+- In-game validation was pending at that time.
 
 ## [0.2.0] — 2026-10-10
-- Añadido soporte de comandos con prefijo `.nexus`, conservando el prefijo slash.
-- `.nexus info` funciona como alias de estado; `.nexus ids` como alias de lista.
-- Formato de estado verde con versión, mods, ticks y estado.
-- README, guía, licencia y notas de versión bilingües.
-- Actualización conservadora, sin reescribir la arquitectura.
-- **Pendiente:** forzar IDs numéricos y validar el motor en el juego real.
-
-## English
 - Added `.nexus` command prefix while retaining slash-prefix compatibility.
 - Added `info` and `ids` aliases and green status formatting.
-- Added bilingual documentation, license and release notes.
-- Conservative update; numeric-only ID enforcement and in-game validation remain pending.
+- Added bilingual documentation, license, and release notes.
+- Conservative update; numeric-only ID enforcement and in-game validation remained pending.
