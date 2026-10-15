@@ -1,28 +1,33 @@
 # Nexus — Minecraft PE
 
-**Español:** Nexus es un motor experimental para cargar y organizar mods JavaScript en Minecraft Pocket Edition 1.0.9 mediante Toolbox 3.2.29 y Rhino/ModPE. Nació para explorar una forma más ligera de ampliar versiones antiguas de Minecraft PE y dar a los creadores una API común para sus mods.
+**Español:** Nexus es un motor experimental para cargar y organizar mods JavaScript en Minecraft Pocket Edition 1.0.9 mediante Toolbox 3.2.29 y Rhino/ModPE. Su objetivo es ofrecer una API común para creadores de mods de versiones antiguas de Minecraft PE.
 
-**English:** Nexus is an experimental engine for loading and organizing JavaScript mods in Minecraft Pocket Edition 1.0.9 through Toolbox 3.2.29 and Rhino/ModPE. It was created to explore a lightweight way to extend older Minecraft PE versions and give mod creators a shared API.
+**English:** Nexus is an experimental engine for loading and organizing JavaScript mods in Minecraft Pocket Edition 1.0.9 through Toolbox 3.2.29 and Rhino/ModPE. It aims to provide a shared API for creators targeting older Minecraft PE versions.
 
-> **Estado / Status:** Nexus V0.2.1 es inestable y está destinada a pruebas. V0.3.0 se encuentra actualmente en desarrollo y aún no es una versión estable.
+> **Estado / Status:** Nexus V0.3.0 es la versión de trabajo del motor y sigue siendo experimental. El creador ha informado una prueba en dispositivo con el motor y el mod Núcleo Terrestre sin errores registrados. Esto no constituye una garantía de compatibilidad para todos los dispositivos ni para todos los mods.
 >
-> **Nexus V0.2.1 is unstable and intended for testing. V0.3.0 is currently in development and is not yet stable.**
+> **Nexus V0.3.0 is the current working engine version and remains experimental. The creator reported an on-device test of the engine and the Núcleo Terrestre mod with zero logged errors. This does not guarantee compatibility across all devices or mods.**
 
 Nexus no es Forge oficial ni promete compatibilidad con versiones modernas. La compatibilidad debe comprobarse en el entorno objetivo.
 
 Nexus is not official Forge and does not promise compatibility with modern versions. Compatibility must be tested in the target environment.
 
+## Novedad / New mod: Núcleo Terrestre
+
+**Español:** Núcleo Terrestre es un mod de defensa para el Beacon de Minecraft PE 1.0.9. Está diseñado para detectar mobs hostiles cercanos, mostrar su presencia y aplicar daño escalonado según la distancia al Beacon. Consulta la [documentación del mod](docs/NUCLEO_TERRESTRE.md) para conocer el comportamiento previsto, la instalación y las limitaciones.
+
+**English:** Núcleo Terrestre is a defensive mod for the Beacon in Minecraft PE 1.0.9. It is designed to detect nearby hostile mobs, report their presence, and apply distance-scaled damage. See the [mod documentation](docs/NUCLEO_TERRESTRE.md) for intended behavior, installation, and limitations.
+
 ## Descargas / Downloads
 
-Las descargas oficiales se publicarán únicamente en [Lanzamientos / Releases](https://github.com/Narutojataque12/Nexus-Minecraft-PE/releases).
+Las descargas oficiales se publicarán únicamente en [Lanzamientos / Releases](https://github.com/Narutojataque12/Nexus-Minecraft-PE/releases). Esta actualización documental no crea ni publica una Release.
 
-Official downloads will be published only on [Releases](https://github.com/Narutojataque12/Nexus-Minecraft-PE/releases).
+Official downloads will be published only on [Releases](https://github.com/Narutojataque12/Nexus-Minecraft-PE/releases). This documentation update does not create or publish a Release.
 
 ## Guías / Guides
 
-Consulta la [guía bilingüe para crear mods](docs/INSTRUCCIONES_CREAR_MODS.md).
-
-See the [bilingual mod-creation guide](docs/INSTRUCCIONES_CREAR_MODS.md).
+- [Guía bilingüe para crear mods / Bilingual mod-creation guide](docs/INSTRUCCIONES_CREAR_MODS.md)
+- [Núcleo Terrestre / Terrestrial Core mod](docs/NUCLEO_TERRESTRE.md)
 
 ## Créditos / Credits
 
