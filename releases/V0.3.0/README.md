@@ -1,45 +1,93 @@
-# Nexus V0.3.0 — estable y jugable
+# Nexus V0.3.0 — versión estable y jugable
 
-## Español
+## Descripción
 
-¡Bienvenidos a Nexus V0.3.0! Presento esta versión como la versión estable y jugable de mi motor para Minecraft Pocket Edition 1.0.9 con Toolbox 3.2.29, ModPE y Rhino/JavaScript ES5. Es mi versión de trabajo definitiva por el momento.
+Nexus V0.3.0 es la versión estable y jugable del motor para Minecraft Pocket Edition 1.0.9, orientada a Toolbox 3.2.29, ModPE, Rhino y JavaScript ES5. Es la versión de referencia del proyecto por el momento.
 
-### Novedades que incorporé
-- Consolidé el registro mediante `Nexus.registerMod({...})`: un mod por archivo con un ID numérico positivo y único.
-- Preparé el diagnóstico de `/Nexus info` para mostrar estado del motor, archivos, mods, errores, advertencias y registros conocidos.
-- Unifiqué los comandos documentados bajo `/Nexus`: `help`, `info`, `log`, `load`, `on ID`, `off ID`, `IDS` y `resources`.
-- Organicé las API para eventos, tareas programadas, logs, mods, comandos, objetos, jugador, mundo, entidades, bloques, efectos, UI, recursos, registro, compatibilidad, almacenamiento, configuración y datos.
-- Incorporé validaciones para IDs duplicadas y detección de conflictos de registro compatibles.
-- Preparé nuevas guías para creadores y asistentes de IA: instrucciones para IA, plantilla ES5 y reglas de registro.
+Nexus proporciona herramientas para registrar, cargar, administrar y diagnosticar mods JavaScript en el entorno objetivo.
 
-### Cambios documentales que hice
-- Reescribí el README como bienvenida a mi versión V0.3.0 estable y jugable.
-- Reemplacé instrucciones antiguas que hacían referencia al motor V0.2 y a comandos con punto.
-- Retiré el ejemplo de mod antiguo que no seguía el formato actual de registro.
-- Añadí `docs/INSTRUCCIONES_IA_NEXUS.txt`, `docs/PLANTILLA_MOD.js` y `docs/REGISTRO_MODS.md`.
-- Preparé estas notas bilingües en `releases/V0.3.0/README.md`.
-- Incorporé al repositorio `engine/Nexus_V0.3.0.js), usando la fuente de mi propio motor y conservando intacta su lógica.
+## Novedades
 
-Dejé los archivos preparados en el repositorio, pero todavía no he publicado la GitHub Release. Lanzaré esa publicación por separado.
+- **Registro de mods:** una llamada a `Nexus.registerMod({...})) por archivo, con un ID numérico positivo y único.
+- **Diagnóstico:** el comando `/Nexus info` presenta información sobre el estado del motor, los archivos, los mods, los errores, las advertencias y los registros conocidos.
+- **Administración:** los comandos documentados incluyen `/Nexus help`, `info`, `log`, `load`, `on ID`, `off ID`, `IDS` y `resources`.
+- **API modular:** módulos para eventos, tareas programadas, registros, mods, comandos, objetos, jugador, mundo, entidades, bloques, efectos, interfaz, recursos, registro, compatibilidad, almacenamiento, configuración y datos.
+- **Validación:** comprobaciones de definiciones y detección de determinados conflictos, incluidos los IDs duplicados.
+- **Documentación técnica:** guía de creación de mods, instrucciones de referencia para asistentes de IA, plantilla JavaScript ES5 y reglas de registro.
 
-## English
+## Compatibilidad
 
-Welcome to Nexus V0.3.0! I'm presenting this as the stable and playable version of my engine for Minecraft Pocket Edition 1.0.9 with Toolbox 3.2.29, ModPE, and Rhino/JavaScript ES5. It is my definitive working version for now.
+- Minecraft Pocket Edition 1.0.9
+- Toolbox 3.2.29
+- ModPE + Rhino
+- JavaScript ES5
 
-### Highlights I added
-- I consolidated registration through `Nexus.registerMod({...})): one mod per file with a unique positive numeric ID.
-- I prepared `/Nexus info` diagnostics to report engine status, files, mods, errors, warnings, and known registrations.
-- I unified the documented commands under `/Nexus`: `help`, `info`, `log`, `load`, `on ID`, `off ID`, `IDS`, and `resources`.
-- I organized the APIs for events, scheduling, logs, mods, commands, items, player, world, entities, blocks, effects, UI, resources, registry, compatibility, storage, configuration, and data.
-- I added validation for duplicate IDs and detection for supported registry conflicts.
-- I prepared new guidance for creators and AI assistants: AI instructions, an ES5 template, and registration rules.
+Las operaciones que dependen de funciones nativas pueden variar según la compilación de Toolbox. Es necesario comprobar el comportamiento concreto dentro del juego.
 
-### Documentation changes I made
-- I rewrote the README to welcome users to my stable and playable V0.3.0.
-- I replaced outdated instructions referring to the V0.2 engine and dot-prefixed commands.
-- I removed the older mod example that did not follow the current registration format.
-- I added `docs/INSTRUCCIONES_IA_NEXUS.txt`, `docs/PLANTILLA_MOD.js`, and `docs/REGISTRO_MODS.md`.
-- I prepared these bilingual release notes at `releases/V0.3.0/README.md`.
-- I added `engine/Nexus_V0.3.0.js` from my own engine source, preserving its logic.
+## Instalación
 
-I have prepared the files in the repository, but I have not published the GitHub Release yet. I will publish it separately.
+1. Descarga `engine/Nexus_V0.3.0.js` desde el repositorio o desde la sección Releases cuando la publicación esté disponible.
+2. Carga el archivo como script principal en Toolbox 3.2.29.
+3. Coloca los mods compatibles en `/sdcard/Nexus/Mods/`.
+4. Entra en un mundo de prueba y ejecuta `/Nexus info`.
+5. Comprueba el funcionamiento de los mods antes de utilizarlos en mundos importantes.
+
+## Documentación
+
+- [Guía para crear mods](../../docs/INSTRUCCIONES_CREAR_MODS.md)
+- [Instrucciones para asistentes de IA](../../docs/INSTRUCCIONES_IA_NEXUS.txt)
+- [Plantilla básica](../../docs/PLANTILLA_MOD.js)
+- [Registro de mods](../../docs/REGISTRO_MODS.md)
+- [Historial de cambios](../../CHANGELOG.md)
+
+## Estado de publicación
+
+Los archivos fuente y la documentación de V0.3.0 están disponibles en el repositorio. La GitHub Release se publicará por separado.
+
+---
+
+# Nexus V0.3.0 — stable and playable version
+
+## Overview
+
+Nexus V0.3.0 is the stable and playable engine version for Minecraft Pocket Edition 1.0.9, targeting Toolbox 3.2.29, ModPE, Rhino, and JavaScript ES5. It is the project's current reference version.
+
+Nexus provides tools for registering, loading, managing, and diagnosing JavaScript mods in the target environment.
+
+## Highlights
+
+- **Mod registration:** one `Nexus.registerMod({...})` call per file, with a unique positive numeric ID.
+- **Diagnostics:** `/Nexus info` reports engine status, files, mods, errors, warnings, and known registrations.
+- **Management:** documented commands include `/Nexus help`, `info`, `log`, `load`, `on ID`, `off ID`, `IDS`, and `resources`.
+- **Modular API:** modules for events, scheduling, logging, mods, commands, items, player, world, entities, blocks, effects, UI, resources, registry, compatibility, storage, configuration, and data.
+- **Validation:** definition checks and detection of selected conflicts, including duplicate IDs.
+- **Technical documentation:** mod creation guide, AI assistant reference instructions, JavaScript ES5 template, and registration rules.
+
+## Compatibility
+
+- Minecraft Pocket Edition 1.0.9
+- Toolbox 3.2.29
+- ModPE + Rhino
+- JavaScript ES5
+
+Operations that depend on native functions may vary by Toolbox build. Specific behavior must be checked in-game.
+
+## Installation
+
+1. Download `engine/Nexus_V0.3.0.js` from this repository or from Releases once the publication is available.
+2. Load the file as the main script in Toolbox 3.2.29.
+3. Place compatible mods in `/sdcard/Nexus/Mods/`.
+4. Enter a test world and run `/Nexus info`.
+5. Verify mod behavior before using it in important worlds.
+
+## Documentation
+
+- [Mod creation guide](../../docs/INSTRUCCIONES_CREAR_MODS.md)
+- [AI assistant reference](../../docs/INSTRUCCIONES_IA_NEXUS.txt)
+- [Basic template](../../docs/PLANTILLA_MOD.js)
+- [Mod registration](../../docs/REGISTRO_MODS.md)
+- [Changelog](../../CHANGELOG.md)
+
+## Publication status
+
+The V0.3.0 source files and documentation are available in the repository. The GitHub Release will be published separately.
