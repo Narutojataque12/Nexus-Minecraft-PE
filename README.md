@@ -10,7 +10,7 @@ Nexus provides a structure for loading, registering, managing, and diagnosing Ja
 
 ## Novedades de V0.3.0 / V0.3.0 highlights
 
-- **Registro de mods:** cada archivo registra un único mod mediante `Nexus.registerMod({...})), con un ID numérico positivo y único.
+- **Registro de mods:** cada archivo registra un único mod mediante `Nexus.registerMod({...})`, con un ID numérico positivo y único.
 - **Diagnóstico:** `/Nexus info` presenta información sobre el estado del motor, los archivos, los mods, los errores, las advertencias y los registros conocidos.
 - **Administración:** los comandos documentados bajo `/Nexus` permiten consultar la ayuda, revisar el estado, guardar registros, cargar mods, habilitarlos o deshabilitarlos y consultar recursos.
 - **Validación y conflictos:** el motor valida definiciones y detecta determinados conflictos de registro, incluidos los relacionados con IDs duplicados.
@@ -19,7 +19,7 @@ Nexus provides a structure for loading, registering, managing, and diagnosing Ja
 
 ### V0.3.0 highlights
 
-- **Mod registration:** each file registers one mod through `Nexus.registerMod({...})), with a unique positive numeric ID.
+- **Mod registration:** each file registers one mod through `Nexus.registerMod({...})`, with a unique positive numeric ID.
 - **Diagnostics:** `/Nexus info` reports engine status, files, mods, errors, warnings, and known registrations.
 - **Management:** the documented `/Nexus` commands provide help, status checks, log output, mod loading, enabling/disabling, and resource inspection.
 - **Validation and conflicts:** the engine validates definitions and detects selected registration conflicts, including duplicate IDs.
