@@ -5,7 +5,7 @@
 ¡Bienvenidos a Nexus V0.3.0! Presento esta versión como la versión estable y jugable de mi motor para Minecraft Pocket Edition 1.0.9 con Toolbox 3.2.29, ModPE y Rhino/JavaScript ES5. Es mi versión de trabajo definitiva por el momento.
 
 ### Novedades que incorporé
-- Consolidé el registro mediante `Nexus.registerMod({...})): un mod por archivo con un ID numérico positivo y único.
+- Consolidé el registro mediante `Nexus.registerMod({...})`: un mod por archivo con un ID numérico positivo y único.
 - Preparé el diagnóstico de `/Nexus info` para mostrar estado del motor, archivos, mods, errores, advertencias y registros conocidos.
 - Unifiqué los comandos documentados bajo `/Nexus`: `help`, `info`, `log`, `load`, `on ID`, `off ID`, `IDS` y `resources`.
 - Organicé las API para eventos, tareas programadas, logs, mods, comandos, objetos, jugador, mundo, entidades, bloques, efectos, UI, recursos, registro, compatibilidad, almacenamiento, configuración y datos.
@@ -16,9 +16,9 @@
 - Reescribí el README como bienvenida a mi versión V0.3.0 estable y jugable.
 - Reemplacé instrucciones antiguas que hacían referencia al motor V0.2 y a comandos con punto.
 - Retiré el ejemplo de mod antiguo que no seguía el formato actual de registro.
-- Añadí `docs/INSTRUCCIONES_IA_NEXUS.txt`, `docs/PLANTILLA_MOD.js) y `docs/REGISTRO_MODS.md`.
+- Añadí `docs/INSTRUCCIONES_IA_NEXUS.txt`, `docs/PLANTILLA_MOD.js` y `docs/REGISTRO_MODS.md`.
 - Preparé estas notas bilingües en `releases/V0.3.0/README.md`.
-- Incorporé al repositorio `engine/Nexus_V0.3.0.js) desde el archivo fuente que recibí, conservando intacta la lógica del motor.
+- Incorporé al repositorio `engine/Nexus_V0.3.0.js), usando la fuente de mi propio motor y conservando intacta su lógica.
 
 Dejé los archivos preparados en el repositorio, pero todavía no he publicado la GitHub Release. Lanzaré esa publicación por separado.
 
@@ -40,6 +40,6 @@ Welcome to Nexus V0.3.0! I'm presenting this as the stable and playable version 
 - I removed the older mod example that did not follow the current registration format.
 - I added `docs/INSTRUCCIONES_IA_NEXUS.txt`, `docs/PLANTILLA_MOD.js`, and `docs/REGISTRO_MODS.md`.
 - I prepared these bilingual release notes at `releases/V0.3.0/README.md`.
-- I added `engine/Nexus_V0.3.0.js` from the source file I received, preserving the engine's logic.
+- I added `engine/Nexus_V0.3.0.js` from my own engine source, preserving its logic.
 
 I have prepared the files in the repository, but I have not published the GitHub Release yet. I will publish it separately.
