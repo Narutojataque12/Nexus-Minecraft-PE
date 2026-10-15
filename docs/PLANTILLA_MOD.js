@@ -1,9 +1,9 @@
 /*
- * Plantilla básica para Nexus V0.3.0
- * Entorno: Minecraft PE 1.0.9 + Toolbox 3.2.29 + ModPE/Rhino + JavaScript ES5
+ * Te comparto una plantilla básica para mi motor Nexus V0.3.0.
+ * Entorno objetivo: Minecraft PE 1.0.9 + Toolbox 3.2.29 + ModPE/Rhino + JavaScript ES5.
  *
  * Copia este archivo a /sdcard/Nexus/Mods/ y cambia el ID y los metadatos.
- * Cada archivo debe registrar EXACTAMENTE un mod con Nexus.registerMod({...}).
+ * Para seguir mi formato de registro, usa exactamente una llamada a Nexus.registerMod({...}) por archivo.
  */
 
 Nexus.registerMod({
@@ -26,14 +26,14 @@ Nexus.registerMod({
     },
 
     events: {
-        // Agrega solo eventos que necesites.
-        // Estos callbacks reciben los argumentos crudos del evento; no reciben api automáticamente.
+        // Agrega solo los eventos que necesites.
+        // Configuré estos callbacks para recibir los argumentos crudos del evento, no api automáticamente.
         // Ejemplo:
         // worldEnter: function () {
-        //     // Se ejecuta cuando el motor informa entrada a un mundo.
+        //     // Tu lógica se ejecuta cuando mi motor informa la entrada a un mundo.
         // },
         // tick: function (tickCount) {
-        //     // Mantén este callback ligero; se llama frecuentemente.
+        //     // Mantén este callback ligero, porque puede ejecutarse frecuentemente.
         // }
     }
 });
