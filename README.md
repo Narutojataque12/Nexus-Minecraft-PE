@@ -47,6 +47,7 @@ Nexus provides a structure for loading, registering, managing, and diagnosing Ja
 - [Plantilla básica JavaScript / Basic JavaScript template](docs/PLANTILLA_MOD.js)
 - [Registro de mods / Mod registration](docs/REGISTRO_MODS.md)
 - [Notas de V0.3.0 / V0.3.0 notes](releases/V0.3.0/README.md)
+- [Revisión Anti-Slop para Rhino ES5 / Anti-Slop review](docs/ANTI_SLOP_ES5.md)
 - [Historial de cambios / Changelog](CHANGELOG.md)
 
 ## Asistentes de IA / AI assistants
