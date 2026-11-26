@@ -47,6 +47,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           name: Nexus V${{ steps.meta.outputs.version }}
+          prerelease: ${{ steps.meta.outputs.version == '0.3.1' }}
           body_path: releases/V${{ steps.meta.outputs.version }}/README.md
           files: |
             dist/Nexus_V${{ steps.meta.outputs.version }}.js
