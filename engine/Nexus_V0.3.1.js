@@ -1841,7 +1841,7 @@ var Nexus = (function () {
         var rec = mods[id];
         if (!rec) return false;
         if (rec.state === "active") return true;
-        if (rec.state === "enabling") return false;
+        if (rec.state === "enabling" || rec.state === "disabling") return false;
         var def = rec.definition;
         rec.state = "enabling";
         if (!rec.loadedOnce && typeof def.onLoad === "function") {
@@ -1895,7 +1895,9 @@ var Nexus = (function () {
         var rec = mods[id], errorsBeforeDisable = callbackErrorSequence;
         if (!rec) return false;
         if (rec.state === "disabled") return true;
+        if (rec.state === "disabling") return false;
         if (rec.state !== "active" && rec.state !== "failed") return false;
+        rec.state = "disabling";
         if (typeof rec.definition.onDisable === "function") callAsOwner(id, rec.definition.onDisable, [apiFor(id)], "onDisable");
         removeOwnedListeners(id);
         removeOwnedTasks(id);
