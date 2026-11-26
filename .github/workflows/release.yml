@@ -30,6 +30,11 @@ jobs:
 
           test -f "$ENGINE_FILE" || { echo "Engine file not found: $ENGINE_FILE"; exit 1; }
           test -f "$NOTES_FILE" || { echo "Release notes not found: $NOTES_FILE"; exit 1; }
+          [[ "$GITHUB_REF_NAME" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "Invalid release tag: $GITHUB_REF_NAME"; exit 1; }
+          ENGINE_VERSION=$(sed -n 's/^[[:space:]]*var VERSION = "\([^"]*\)";/\1/p' "$ENGINE_FILE")
+          test "$ENGINE_VERSION" = "$VERSION" || { echo "Tag version $VERSION does not match engine version $ENGINE_VERSION"; exit 1; }
+          node --check "$ENGINE_FILE"
+          node tests/nexus-lifecycle.test.js
 
           mkdir -p dist
           cp "$ENGINE_FILE" "dist/Nexus_V${VERSION}.js"

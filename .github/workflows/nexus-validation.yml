@@ -23,6 +23,9 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Ejecutar regresiones del motor
+        run: node tests/nexus-lifecycle.test.js
+
       - name: Validar sintaxis de los archivos .js
         shell: bash
         run: |

@@ -8,7 +8,7 @@ Nexus proporciona herramientas para registrar, cargar, administrar y diagnostica
 
 ## Novedades
 
-- **Registro de mods:** una llamada a `Nexus.registerMod({...})) por archivo, con un ID numérico positivo y único.
+- **Registro de mods:** una llamada a `Nexus.registerMod({...}) por archivo, con un ID numérico positivo y único.
 - **Diagnóstico:** el comando `/Nexus info` presenta información sobre el estado del motor, los archivos, los mods, los errores, las advertencias y los registros conocidos.
 - **Administración:** los comandos documentados incluyen `/Nexus help`, `info`, `log`, `load`, `on ID`, `off ID`, `IDS` y `resources`.
 - **API modular:** módulos para eventos, tareas programadas, registros, mods, comandos, objetos, jugador, mundo, entidades, bloques, efectos, interfaz, recursos, registro, compatibilidad, almacenamiento, configuración y datos.
@@ -26,7 +26,7 @@ Las operaciones que dependen de funciones nativas pueden variar según la compil
 
 ## Instalación
 
-1. Descarga `engine/Nexus_V0.3.0.js` desde el repositorio o desde la sección Releases cuando la publicación esté disponible.
+1. Descarga `engine/Nexus_V0.3.0.js` desde el repositorio o desde la sección Releases ahora disponible en la GitHub Release V0.3.0.
 2. Carga el archivo como script principal en Toolbox 3.2.29.
 3. Coloca los mods compatibles en `/sdcard/Nexus/Mods/`.
 4. Entra en un mundo de prueba y ejecuta `/Nexus info`.
@@ -42,7 +42,7 @@ Las operaciones que dependen de funciones nativas pueden variar según la compil
 
 ## Estado de publicación
 
-Los archivos fuente y la documentación de V0.3.0 están disponibles en el repositorio. La GitHub Release se publicará por separado.
+Los archivos fuente y la documentación de V0.3.0 están disponibles en el repositorio. La GitHub Release V0.3.0 está publicada en GitHub.
 
 ---
 
@@ -90,4 +90,4 @@ Operations that depend on native functions may vary by Toolbox build. Specific b
 
 ## Publication status
 
-The V0.3.0 source files and documentation are available in the repository. The GitHub Release will be published separately.
+The V0.3.0 source files and documentation are available in the repository. The GitHub Release V0.3.0 is published on GitHub.

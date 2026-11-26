@@ -1,5 +1,13 @@
 # Changelog / Registro de cambios
 
+## [0.3.1] — 2026-11-26 (candidata)
+- Se corrige la atribución de propietario en callbacks globales anidados.
+- Se limpia el estado lógico de recursos y reclamos de IDs al desactivar mods; se conservan IDs de ítems nativos que no se pueden retirar durante la sesión.
+- Se impide que listeners restantes de un evento se ejecuten después de desactivar su mod durante el despacho.
+- Se rechaza la reentrada de activación/desactivación durante la transición de activación y se sincroniza el estado fallido del archivo.
+- Se añaden pruebas de regresión y validaciones de versión para CI/Release.
+- Candidata pendiente de validación real en Minecraft PE 1.0.9 + Toolbox 3.2.29 + Rhino.
+
 ## [0.3.0] — 2026-10-15
 
 ### Motor y herramientas
@@ -18,7 +26,7 @@
 
 ### Estado de publicación
 - La documentación y el código fuente están disponibles en la rama principal.
-- La GitHub Release de V0.3.0 no se ha publicado todavía.
+- V0.3.0 se publicó como GitHub Release el 15 de octubre de 2026.
 
 ## [0.2.1] — 2026-10-10
 - Se añade el informe inicial automático al entrar al mundo.

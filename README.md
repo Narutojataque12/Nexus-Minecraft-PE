@@ -1,10 +1,10 @@
-# Nexus V0.3.0
+# Nexus V0.3.1 (candidata)
 
-**Nexus V0.3.0 es la versión estable y jugable del motor para Minecraft: Pocket Edition 1.0.9.** Está orientado a Toolbox 3.2.29, ModPE, Rhino y JavaScript ES5. Esta es la versión de referencia del proyecto por el momento.
+**Nexus V0.3.1 es una candidata de mantenimiento** para Minecraft: Pocket Edition 1.0.9, Toolbox 3.2.29, ModPE, Rhino y JavaScript ES5. Incluye correcciones de ciclo de vida y pruebas automatizadas. La validación real en el juego sigue pendiente; no se etiqueta como estable/jugable hasta completarla.
 
 Nexus proporciona una estructura para cargar, registrar, administrar y diagnosticar mods JavaScript en el entorno clásico de Minecraft PE.
 
-**English:** **Nexus V0.3.0 is the stable and playable engine version for Minecraft: Pocket Edition 1.0.9.** It targets Toolbox 3.2.29, ModPE, Rhino, and JavaScript ES5. This is the project's current reference version.
+**English:** **Nexus V0.3.1 is a maintenance candidate** for Minecraft: Pocket Edition 1.0.9, Toolbox 3.2.29, ModPE, Rhino, and JavaScript ES5. It includes lifecycle fixes and automated tests. In-game validation is still pending; it is not labelled stable/playable until that is complete.
 
 Nexus provides a structure for loading, registering, managing, and diagnosing JavaScript mods in the classic Minecraft PE environment.
 
@@ -28,14 +28,14 @@ Nexus provides a structure for loading, registering, managing, and diagnosing Ja
 
 ## Primeros pasos / Getting started
 
-1. Descarga `engine/Nexus_V0.3.0.js` desde el repositorio. La GitHub Release se publicará por separado.
-2. Carga `Nexus_V0.3.0.js` como script principal en Toolbox 3.2.29.
+1. Descarga `engine/Nexus_V0.3.1.js` desde esta rama candidata. La Release se publicará después de validar la candidata dentro del juego.
+2. Carga `Nexus_V0.3.1.js` como script principal en Toolbox 3.2.29.
 3. Coloca cada archivo de mod compatible en `/sdcard/Nexus/Mods/`.
 4. Entra en un mundo y ejecuta `/Nexus info` para consultar el estado del motor y de los mods.
 5. Prueba los mods en un mundo de prueba antes de usarlos en partidas importantes.
 
-1. Obtain `engine/Nexus_V0.3.0.js` from this repository. The GitHub Release will be published separately.
-2. Load `Nexus_V0.3.0.js` as the main script in Toolbox 3.2.29.
+1. Obtain `engine/Nexus_V0.3.1.js` from this candidate branch. The Release will follow in-game validation.
+2. Load `Nexus_V0.3.1.js` as the main script in Toolbox 3.2.29.
 3. Place each compatible mod file in `/sdcard/Nexus/Mods/`.
 4. Enter a world and run `/Nexus info` to inspect engine and mod status.
 5. Test mods in a test world before using them in important worlds.
