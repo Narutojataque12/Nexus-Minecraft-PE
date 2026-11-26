@@ -26,7 +26,7 @@ Las operaciones que dependen de funciones nativas pueden variar según la compil
 
 ## Instalación
 
-1. Descarga `engine/Nexus_V0.3.0.js` desde el repositorio o desde la sección Releases cuando la publicación esté disponible.
+1. Descarga `engine/Nexus_V0.3.0.js` desde el repositorio o desde la sección Releases ahora disponible en la GitHub Release V0.3.0.
 2. Carga el archivo como script principal en Toolbox 3.2.29.
 3. Coloca los mods compatibles en `/sdcard/Nexus/Mods/`.
 4. Entra en un mundo de prueba y ejecuta `/Nexus info`.
