@@ -1879,6 +1879,7 @@ var Nexus = (function () {
                 removeOwnedResources(id);
                 removeOwnedClaims(id);
                 rec.state = "failed";
+                if (rec.sourceFile && fileStates[rec.sourceFile]) { fileStates[rec.sourceFile].state = "failed"; fileStates[rec.sourceFile].error = rec.lastError || "No se pudo activar el mod"; }
                 return false;
             }
         }
