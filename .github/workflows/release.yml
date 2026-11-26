@@ -34,6 +34,7 @@ jobs:
           ENGINE_VERSION=$(sed -n 's/^[[:space:]]*var VERSION = "\([^"]*\)";/\1/p' "$ENGINE_FILE")
           test "$ENGINE_VERSION" = "$VERSION" || { echo "Tag version $VERSION does not match engine version $ENGINE_VERSION"; exit 1; }
           node --check "$ENGINE_FILE"
+          node tests/nexus-lifecycle.test.js
 
           mkdir -p dist
           cp "$ENGINE_FILE" "dist/Nexus_V${VERSION}.js"
