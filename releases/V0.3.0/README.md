@@ -8,7 +8,7 @@ Nexus proporciona herramientas para registrar, cargar, administrar y diagnostica
 
 ## Novedades
 
-- **Registro de mods:** una llamada a `Nexus.registerMod({...})) por archivo, con un ID numérico positivo y único.
+- **Registro de mods:** una llamada a `Nexus.registerMod({...}) por archivo, con un ID numérico positivo y único.
 - **Diagnóstico:** el comando `/Nexus info` presenta información sobre el estado del motor, los archivos, los mods, los errores, las advertencias y los registros conocidos.
 - **Administración:** los comandos documentados incluyen `/Nexus help`, `info`, `log`, `load`, `on ID`, `off ID`, `IDS` y `resources`.
 - **API modular:** módulos para eventos, tareas programadas, registros, mods, comandos, objetos, jugador, mundo, entidades, bloques, efectos, interfaz, recursos, registro, compatibilidad, almacenamiento, configuración y datos.
@@ -42,7 +42,7 @@ Las operaciones que dependen de funciones nativas pueden variar según la compil
 
 ## Estado de publicación
 
-Los archivos fuente y la documentación de V0.3.0 están disponibles en el repositorio. La GitHub Release se publicará por separado.
+Los archivos fuente y la documentación de V0.3.0 están disponibles en el repositorio. La GitHub Release V0.3.0 está publicada en GitHub.
 
 ---
 
@@ -90,4 +90,4 @@ Operations that depend on native functions may vary by Toolbox build. Specific b
 
 ## Publication status
 
-The V0.3.0 source files and documentation are available in the repository. The GitHub Release will be published separately.
+The V0.3.0 source files and documentation are available in the repository. The GitHub Release V0.3.0 is published on GitHub.
