@@ -26,7 +26,7 @@
 
 ### Estado de publicación
 - La documentación y el código fuente están disponibles en la rama principal.
-- La GitHub Release de V0.3.0 no se ha publicado todavía.
+- V0.3.0 se publicó como GitHub Release el 15 de octubre de 2026.
 
 ## [0.2.1] — 2026-10-10
 - Se añade el informe inicial automático al entrar al mundo.
