@@ -40,9 +40,10 @@ test("recursive enable from onLoad is rejected without repeating onLoad", functi
   assert.strictEqual(nested,false);
 });
 
-test("disabling while enabling cannot leave state active after disable", function () {
-  var n = engine(), id = 8105;
-  n.registerMod({id:id,onEnable:function(api){api.Mods.disable(id);}});
+test("disable requested during enable is rejected cleanly", function () {
+  var n = engine(), id = 8105, result;
+  n.registerMod({id:id,onEnable:function(api){result=api.Mods.disable(id);}});
   n.Mods.enable(id);
+  assert.strictEqual(result,false);
   assert.strictEqual(n.Mods.get(id).state,"active");
 });
