@@ -29,13 +29,13 @@ Nexus provides a structure for loading, registering, managing, and diagnosing Ja
 ## Primeros pasos / Getting started
 
 1. Descarga `engine/Nexus_V0.3.1.js` desde esta rama candidata. La Release se publicará después de validar la candidata dentro del juego.
-2. Carga `Nexus_V0.3.0.js` como script principal en Toolbox 3.2.29.
+2. Carga `Nexus_V0.3.1.js` como script principal en Toolbox 3.2.29.
 3. Coloca cada archivo de mod compatible en `/sdcard/Nexus/Mods/`.
 4. Entra en un mundo y ejecuta `/Nexus info` para consultar el estado del motor y de los mods.
 5. Prueba los mods en un mundo de prueba antes de usarlos en partidas importantes.
 
-1. Obtain `engine/Nexus_V0.3.0.js` from this repository. The GitHub Release will be published separately.
-2. Load `Nexus_V0.3.0.js` as the main script in Toolbox 3.2.29.
+1. Obtain `engine/Nexus_V0.3.1.js` from this candidate branch. The Release will follow in-game validation.
+2. Load `Nexus_V0.3.1.js` as the main script in Toolbox 3.2.29.
 3. Place each compatible mod file in `/sdcard/Nexus/Mods/`.
 4. Enter a world and run `/Nexus info` to inspect engine and mod status.
 5. Test mods in a test world before using them in important worlds.
