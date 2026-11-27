@@ -2,21 +2,21 @@ NEXUS V0.3.0 — GUÍA DE REFERENCIA PARA ASISTENTES DE IA
 ========================================================
 
 OBJETIVO
-Utiliza estas reglas como contexto técnico al generar o revisar mods para Nexus V0.3.0, dirigido a Minecraft Pocket Edition 1.0.9, Toolbox 3.2.29, ModPE, Rhino y JavaScript ES5. Este documento sirve como referencia; por sí solo no entrena un modelo.
+Usa estas reglas como contexto técnico al crear o revisar mods para Nexus V0.3.0. El proyecto está dirigido a Minecraft Pocket Edition 1.0.9, Toolbox 3.2.29, ModPE, Rhino y JavaScript ES5. Este documento sirve como referencia; por sí solo no entrena un modelo.
 
 REFERENCIA TÉCNICA
-1. Lee el archivo completo engine/Nexus_V0.3.0.js antes de crear o corregir un mod.
-2. Utiliza únicamente funciones, argumentos y eventos presentes en el código.
-3. Si la documentación difiere del código, sigue el código vigente.
-4. Considera V0.3.0 la versión estable y jugable de referencia del proyecto. No la sustituyas por versiones anteriores ni modifiques el motor sin autorización explícita.
-5. Diferencia las comprobaciones estáticas de las pruebas realizadas dentro del juego. Un registro sin errores no demuestra por sí solo que un comportamiento sea correcto.
+1. Antes de crear o corregir un mod, lee completo el archivo engine/Nexus_V0.3.0.js.
+2. Usa solo las funciones, los argumentos y los eventos que aparecen en el código.
+3. Si la documentación no coincide con el código, sigue el código vigente.
+4. Toma V0.3.0 como la versión estable y jugable de referencia del proyecto. No la reemplaces por versiones anteriores ni modifiques el motor sin autorización explícita.
+5. Distingue las comprobaciones estáticas de las pruebas dentro del juego. Que no haya errores en los registros no demuestra, por sí solo, que un comportamiento sea correcto.
 
 ENTORNO
 - Minecraft PE 1.0.9, Toolbox 3.2.29, ModPE y Rhino.
-- JavaScript ES5 únicamente.
-- Evita let, const, funciones flecha, clases, template strings, módulos, async/await, Node.js y APIs que no estén disponibles en este entorno.
-- Los eventos de ModPE se gestionan desde el motor; no declares callbacks globales de ModPE dentro de los mods.
-- Los mods comparten el espacio global, por lo que deben evitar nombres genéricos y colisiones.
+- Usa únicamente JavaScript ES5.
+- No uses let, const, funciones flecha, clases, template strings, módulos, async/await, Node.js ni APIs que no estén disponibles en este entorno.
+- El motor gestiona los eventos de ModPE. No declares callbacks globales de ModPE dentro de los mods.
+- Los mods comparten el espacio global. Evita los nombres genéricos y las colisiones.
 
 REGISTRO OBLIGATORIO
 Cada archivo JavaScript debe contener exactamente una llamada directa a:
@@ -31,27 +31,27 @@ Nexus.registerMod({
     onDisable: function (api) {},
     events: {}
 });
-- Utiliza un ID entero positivo, único y escrito directamente en el registro.
+- Asigna un ID entero positivo, único y escrito directamente en el registro.
 - No registres dos mods en un mismo archivo.
 - La ruta predeterminada es /sdcard/Nexus/Mods/.
 - El nombre del archivo no tiene que coincidir con el ID.
-- No utilices ejemplos antiguos que declaren un objeto y esperen que se cargue automáticamente sin registro.
+- No uses ejemplos antiguos que declaren un objeto y esperen que se cargue automáticamente sin registrarlo.
 
 CICLO DE VIDA Y EVENTOS
 - onLoad(api), onEnable(api) y onDisable(api) reciben la API del mod.
-- Los callbacks de events reciben los argumentos del evento; no asumas que reciben api.
-- Entre los eventos documentados se encuentran worldEnter, worldLeave, tick, useItem, destroyBlock, startDestroyBlock, continueDestroyBlock, attack, death, entityHurt, eat, projectileHitEntity, projectileHitBlock, entityAdded, entityRemoved, chat, serverMessage y command.
-- Comprueba las firmas y los argumentos en el código fuente antes de utilizarlos. Mantén el trabajo del evento tick ligero.
+- Los callbacks de events reciben los argumentos del evento; no asumas que también reciben api.
+- Entre los eventos documentados están worldEnter, worldLeave, tick, useItem, destroyBlock, startDestroyBlock, continueDestroyBlock, attack, death, entityHurt, eat, projectileHitEntity, projectileHitBlock, entityAdded, entityRemoved, chat, serverMessage y command.
+- Antes de usar un evento, comprueba sus firmas y argumentos en el código fuente. Mantén ligero el trabajo que haces en tick.
 
 API DEL MOD
 Los callbacks del ciclo de vida reciben un objeto API con los módulos version, id, Events, Scheduler, Logger, Mods, Commands, Items, Player, World, Entities, Blocks, Effects, UI, Resources, Registry, Compat, Storage, Config, Data y message.
-Utiliza únicamente los métodos existentes y comprueba sus firmas en Nexus_V0.3.0.js. Algunas operaciones nativas pueden requerir verificación dentro de Minecraft PE antes de asegurar su comportamiento.
+Usa únicamente los métodos existentes y comprueba sus firmas en Nexus_V0.3.0.js. Algunas operaciones nativas requieren verificación dentro de Minecraft PE antes de que puedas asegurar cómo se comportan.
 
 PROCESO RECOMENDADO
 1. Lee el motor y la documentación pertinente.
 2. Identifica las funciones disponibles y sus limitaciones.
 3. Implementa un mod autocontenido en ES5 con un solo registro.
-4. Revisa sintaxis, IDs repetidos, funciones inexistentes y trabajo excesivo por tick.
+4. Revisa la sintaxis, los IDs repetidos, las funciones inexistentes y el trabajo excesivo por tick.
 5. Distingue las comprobaciones estáticas de la validación dentro del juego.
 6. Entrega el archivo JavaScript, los pasos de instalación y las limitaciones conocidas.
 
@@ -66,8 +66,8 @@ COMANDOS DOCUMENTADOS
 - /Nexus resources
 
 CRITERIOS DE CALIDAD
-- No reescribas el motor completo para resolver un problema limitado a un mod.
-- No afirmes que una función existe o funciona sin evidencia.
+- Para resolver un problema limitado a un mod, no reescribas el motor completo.
+- No asegures que una función existe o funciona si no puedes comprobarlo.
 - No publiques lanzamientos en nombre del propietario del proyecto.
 - No inventes resultados de pruebas en dispositivo.
-- Consulta docs/PLANTILLA_MOD.js y docs/REGISTRO_MODS.md para mantener el formato correcto.
+- Consulta docs/PLANTILLA_MOD.js y docs/REGISTRO_MODS.md para seguir el formato correcto.
