@@ -1,12 +1,12 @@
 # Changelog / Registro de cambios
 
 ## [0.3.1] — 2026-11-26 (candidata)
-- Se corrige la atribución de propietario en callbacks globales anidados.
-- Se limpia el estado lógico de recursos y reclamos de IDs al desactivar mods; se conservan IDs de ítems nativos que no se pueden retirar durante la sesión.
-- Se impide que listeners restantes de un evento se ejecuten después de desactivar su mod durante el despacho.
-- Se rechaza la reentrada de activación/desactivación durante la transición de activación y se sincroniza el estado fallido del archivo.
-- Se añaden pruebas de regresión y validaciones de versión para CI/Release.
-- Candidata pendiente de validación real en Minecraft PE 1.0.9 + Toolbox 3.2.29 + Rhino.
+- Se restablece correctamente el propietario actual durante callbacks globales anidados.
+- Al desactivar mods, se limpia el estado lógico de los recursos y las reservas de IDs. Las IDs de ítems nativos que no pueden retirarse durante la sesión se conservan.
+- Si un mod se desactiva durante el despacho de un evento, sus listeners pendientes dejan de ejecutarse.
+- Durante la transición de activación, se rechazan los intentos reentrantes de activar o desactivar un mod. Si falla una reactivación, el archivo queda marcado como fallido.
+- Se añaden pruebas de regresión y verificaciones de versión para CI/Release.
+- La candidata aún requiere validación dentro del juego con Minecraft PE 1.0.9 + Toolbox 3.2.29 + Rhino.
 
 ## [0.3.0] — 2026-10-15
 
